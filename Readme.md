@@ -54,34 +54,6 @@ Open `http://localhost:5173` in your browser.
 
 ---
 
-## 🚀 Deploying to Vercel (Frontend)
-
-### Step 1 — Push to GitHub
-
-Ensure your repo is on GitHub. Both `frontend/` and `backend/` folders should be committed.
-
-### Step 2 — Deploy the Backend First
-
-Deploy the **backend** to a service like [Render](https://render.com) or [Railway](https://railway.app).  
-Copy the live base URL it gives you (e.g. `https://your-api.onrender.com`).
-
-### Step 3 — Deploy the Frontend to Vercel
-
-1. Go to [vercel.com](https://vercel.com) → **New Project** → Import your GitHub repo.
-2. Set **Root Directory** to `frontend`.
-3. Framework preset: **Vite** (auto-detected).
-4. Under **Environment Variables**, add:
-   ```
-   VITE_API_URL = https://your-api.onrender.com
-   ```
-5. Click **Deploy**. Done! ✅
-
-> **Why `VITE_API_URL`?** Vite exposes only variables prefixed with `VITE_` to the browser bundle. The app falls back to `http://localhost:3000` when the variable is not set (local dev).
-
-> **Why `vercel.json`?** React Router uses the browser History API. Without the rewrite rule in `vercel.json`, refreshing any page other than `/` returns a 404. The rewrite rule directs all paths back to `index.html` so React Router handles them.
-
----
-
 ## 📂 Project Structure
 
 ```
@@ -119,4 +91,3 @@ INTERNSPARK_TASK2/
 ## ✍️ Authors
 
 - **Niharika Mente** — React Frontend  
-- **Prem Kumar** — Express REST API Backend

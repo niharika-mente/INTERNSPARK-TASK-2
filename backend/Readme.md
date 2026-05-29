@@ -110,4 +110,4 @@ Project screenshots are available inside:
 
 ## Author
 
-Prem Kumar
+Niharika Mente
